@@ -1,0 +1,10 @@
+node('x86_runner2'){
+    checkout scm //Getting content of this repo
+    stage('Boot xv6') { // for display purposes
+        //Compiling helloworld.c using bash commands
+        sh '''#!/bin/bash
+            (cat xv6-bash-script.sh)| make qemu & > stdio
+            sleep 15
+         '''
+    }
+}
