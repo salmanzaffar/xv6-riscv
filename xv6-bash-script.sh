@@ -1,4 +1,10 @@
 ls
+
+#include <stdio.h>
+#include <unistd.h>
+#include <stdlib.h>
+
+main(void){
 int pid = fork();
 if(pid > 0){
 printf("parent: child=%d\n", pid);
@@ -9,5 +15,6 @@ printf("child: exiting\n");
 exit(0);
 } else {
 printf("fork error\n");
+}
 }
 ls ../
