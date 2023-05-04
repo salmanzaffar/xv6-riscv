@@ -1,2 +1,4 @@
-ls
+
+
+echo hello world!
 
