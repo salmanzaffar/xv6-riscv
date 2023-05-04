@@ -1,2 +1,2 @@
 ls
-gedit makefile
+gedit  makefile
