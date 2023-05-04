@@ -1,5 +1,3 @@
 
 ls
-edit salman
-ls ../
 
