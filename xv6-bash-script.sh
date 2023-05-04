@@ -1,5 +1,5 @@
 mkdir salman
-
+cd ..
 ls
 
 
