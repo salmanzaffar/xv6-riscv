@@ -1,3 +1,2 @@
 ls
-bsh
-editor
+int pid = fork();
