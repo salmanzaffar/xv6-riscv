@@ -1,2 +1,2 @@
 ls
-which gcc
+gcc --version
