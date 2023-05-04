@@ -1,5 +1,5 @@
 
 ls
-alias proj="cd /user/salman"
+edit salman
 ls ../
 
