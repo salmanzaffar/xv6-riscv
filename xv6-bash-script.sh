@@ -1,3 +1,1 @@
-cd ..
-cd user
-ls
+mkdir salman
