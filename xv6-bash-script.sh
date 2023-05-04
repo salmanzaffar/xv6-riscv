@@ -1,1 +1,3 @@
 mkdir salman
+
+ls
