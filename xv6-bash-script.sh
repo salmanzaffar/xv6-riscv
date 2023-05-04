@@ -1,4 +1,2 @@
-
-
-echo $PATH
-
+which gcc
+gcc --version
