@@ -1,2 +1,3 @@
 cd ..
+cd user
 ls
