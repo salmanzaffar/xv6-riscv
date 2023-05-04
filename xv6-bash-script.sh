@@ -1,2 +1,3 @@
 ls
-int pid = fork()
+int pid = fork();
+pid
