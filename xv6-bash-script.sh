@@ -1,6 +1,6 @@
 
 ls ../
 make clean
-make
+
 
 
