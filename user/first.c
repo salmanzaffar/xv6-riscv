@@ -1,7 +1,7 @@
 //A Simple C program
-include "types.h"
-include "stat.h"
-include "user.h"
+#include "types.h"
+#include "stat.h"
+#include "user.h"
 	
 //passing command line arguments
 	
