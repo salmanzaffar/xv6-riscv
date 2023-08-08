@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "common.h"
+#include <unistd.h>
 
 int main(int argc, char *argv[])
 {
@@ -12,7 +12,7 @@ int main(int argc, char *argv[])
 
     while (1) {
 	printf("%s\n", str);
-	Spin(1);
+	Sleep(1);
     }
     return 0;
 }
