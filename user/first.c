@@ -1,7 +1,7 @@
 //#include </salmanzaffar/xv6-riscv/kernel/types.h>
 //#include </salmanzaffar/xv6-riscv/user/user.h>
 
-//#include <stdio.h>
+#include <stdio.h>
 //#include <stdlib.h>
 
 int main(void){
