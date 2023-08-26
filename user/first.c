@@ -1,5 +1,5 @@
-#include "/salmanzaffar/xv6-riscv/kernel/types.h"
-#include "/salmanzaffar/xv6-riscv/user/user.h"
+#include </salmanzaffar/xv6-riscv/kernel/types.h>
+#include </salmanzaffar/xv6-riscv/user/user.h>
 
 //#include <stdio.h>
 //#include <stdlib.h>
