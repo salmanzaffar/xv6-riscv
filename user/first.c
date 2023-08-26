@@ -1,5 +1,5 @@
-#include "/home/salman/xv6-riscv/kernel/types.h"
-#include "/home/salman/xv6-riscv/user/user.h"
+#include "/kernel/types.h"
+#include "/user/user.h"
 
 #include <stdio.h>
 
