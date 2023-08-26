@@ -1,4 +1,4 @@
-#include "types.h"
+#include "xv6-riscv/kernel/types.h"
 #include "xv6-riscv/user/user.h"
 
 //#include <stdio.h>
