@@ -3,7 +3,8 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <glibc.h>
+#include <gnu/libc-version.h>
+
 
 int main(void){
 int pid=fork();
