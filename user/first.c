@@ -1,9 +1,8 @@
-//#include </salmanzaffar/xv6-riscv/kernel/types.h>
-//#include </salmanzaffar/xv6-riscv/user/user.h>
+#include <xv6-riscv/kernel/types.h>
+#include <xv6-riscv/user/user.h>
 
 #include <stdio.h>
-#include <stdlib.h>
-#include <gnu/libc-version.h>
+
 
 
 int main(void){
