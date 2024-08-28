@@ -4,8 +4,8 @@
 #include "user/user.h"
 #include "kernel/fcntl.h"
 
-// Parsed command representation
-#define EXEC  1
+// Parsed command representation-Macro definition in C 
+#define EXEC  1    
 #define REDIR 2
 #define PIPE  3
 #define LIST  4
@@ -13,19 +13,19 @@
 
 #define MAXARGS 10
 
-struct cmd {
+struct cmd {   //fundamental data structure cmd consisting of an integer datatype called type     
   int type;
 };
 
 struct execcmd {
   int type;
-  char *argv[MAXARGS];
+  char *argv[MAXARGS];   //a 10-element pointer argv that can store a character string. 
   char *eargv[MAXARGS];
 };
 
 struct redircmd {
   int type;
-  struct cmd *cmd;
+  struct cmd *cmd;       //*cmd means a local pointer cmd pointing to an integer datatype provided by a fundamental datastructure cmd. local cmd will store integer values 
   char *file;
   char *efile;
   int mode;
@@ -34,7 +34,7 @@ struct redircmd {
 
 struct pipecmd {
   int type;
-  struct cmd *left;
+  struct cmd *left;      //fundamental datastructure cmd modified
   struct cmd *right;
 };
 
@@ -52,7 +52,8 @@ struct backcmd {
 int fork1(void);  // Fork but panics on failure.
 void panic(char*);
 struct cmd *parsecmd(char*);
-void runcmd(struct cmd*) __attribute__((noreturn));
+void runcmd(struct cmd*) __attribute__((noreturn)); //__attribute__((noreturn)) This function attribute informs the compiler that the function does not return. 
+                                                    //The compiler can then perform optimizations by removing the code that is never reached.
 
 // Execute cmd.  Never returns.
 void
@@ -134,9 +135,9 @@ runcmd(struct cmd *cmd)
 int
 getcmd(char *buf, int nbuf)
 {
-  write(2, "$ ", 2);
-  memset(buf, 0, nbuf);
-  gets(buf, nbuf);
+  write(2, "$ ", 2);       //write() writes an error message $ on file descriptor 2
+  memset(buf, 0, nbuf);    //memset() resets all the character bytes of buf as 0s
+  gets(buf, nbuf);         //gets() receives the characters of user command in buf   
   if(buf[0] == 0) // EOF
     return -1;
   return 0;
@@ -145,8 +146,8 @@ getcmd(char *buf, int nbuf)
 int
 main(void)
 {
-  static char buf[100];
-  int fd;
+  static char buf[100];    //a 100-charater buffer buf declared
+  int fd;                  //an integer for file descriptor declared
 
   // Ensure that three file descriptors are open.
   while((fd = open("console", O_RDWR)) >= 0){
@@ -157,7 +158,7 @@ main(void)
   }
 
   // Read and run input commands.
-  while(getcmd(buf, sizeof(buf)) >= 0){
+  while(getcmd(buf, sizeof(buf)) >= 0){              //getcmd() call sends size of buf as an output argument & receives buf contents as input argument
     if(buf[0] == 'c' && buf[1] == 'd' && buf[2] == ' '){
       // Chdir must be called by the parent, not the child.
       buf[strlen(buf)-1] = 0;  // chop \n
